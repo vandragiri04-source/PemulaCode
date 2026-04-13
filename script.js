@@ -92,10 +92,10 @@ const updateClockAndDate = () => {
     const year = now.getFullYear();
 
     if (clockElement) {
-        clockElement.textContent = `Jam : ${hours} : ${minutes} : ${seconds}`;
+        clockElement.textContent = `${hours}:${minutes}:${seconds}`;
     }
     if (dateElement) {
-        dateElement.textContent = `Hari : ${dayName} | Tanggal : ${dayNumber} | Bulan : ${monthName} | Tahun : ${year}`;
+        dateElement.textContent = `${dayName} ${dayNumber} ${monthName} ${year}`;
     }
 };
 

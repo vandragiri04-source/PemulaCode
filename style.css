@@ -43,61 +43,46 @@ header {
 
 header .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
 }
 
 .header-time {
     display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    min-width: 200px;
+    gap: 1rem;
+    align-items: center;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .header-time div {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: var(--white);
     font-weight: 500;
-    white-space: normal;
-    line-height: 1.2;
-}
-
-.header-time #date {
-    font-size: 0.65rem;
-    color: var(--light-green);
+    white-space: nowrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.logo-img {
-    width: 160px;
-    height: 160px;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    display: block;
-    flex-shrink: 0;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .logo h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
+    order: 1;
+}
+
+.logo-img {
+    order: 2;
 }
 
 .logo p {
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin: 0;
+    order: 3;
 }
 
 /* Navigation */
@@ -147,7 +132,7 @@ nav {
 .hero {
     background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
     color: var(--white);
-    padding: 200px 0 80px;
+    padding: 250px 0 80px;
     text-align: center;
 }
 
@@ -454,7 +439,7 @@ footer {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 180px;
+        top: 300px;
         flex-direction: column;
         background-color: var(--primary-green);
         width: 100%;
@@ -473,20 +458,24 @@ footer {
     }
 
     .logo-img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
 
     .header-time {
-        min-width: 150px;
+        min-width: 250px;
     }
 
     .header-time div {
-        font-size: 0.6rem;
+        font-size: 0.75rem;
     }
 
-    .header-time #date {
-        font-size: 0.55rem;
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo p {
+        font-size: 0.8rem;
     }
 
     .hero h2 {
@@ -522,7 +511,7 @@ footer {
     }
 
     .hero {
-        padding: 100px 0 60px;
+        padding: 180px 0 60px;
     }
 
     .hero h2 {
@@ -534,19 +523,24 @@ footer {
     }
 
     .logo-img {
-        width: 80px;
-        height: 80px;
+        width: 150px;
+        height: 150px;
     }
 
     .header-time {
-        min-width: 130px;
+        min-width: 200px;
+        padding: 0.4rem 0.8rem;
     }
 
     .header-time div {
-        font-size: 0.55rem;
+        font-size: 0.7rem;
     }
 
-    .header-time #date {
-        font-size: 0.5rem;
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo p {
+        font-size: 0.7rem;
     }
 }
