@@ -74,7 +74,7 @@ header .container {
 }
 
 .logo h1 {
-    order: 1;
+    order: 3;
     font-size: 0.9rem;
     font-weight: 700;
     margin: 0;
@@ -93,13 +93,10 @@ header .container {
 }
 
 .logo p {
-    order: 3;
+    order: 1;
     font-size: 0.9rem;
     font-weight: 400;
     margin: 0;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
 }
 
 /* Navigation */
