@@ -63,3 +63,41 @@ document.querySelectorAll('.btn').forEach(btn => {
         // Efek tambahan jika diperlukan
     });
 });
+
+// Real-time Clock dan Tanggal
+const clockElement = document.getElementById('clock');
+const dateElement = document.getElementById('date');
+
+const formatTwoDigits = value => String(value).padStart(2, '0');
+
+const getIndonesianDay = dayIndex => {
+    const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    return days[dayIndex] || '-';
+};
+
+const getIndonesianMonth = monthIndex => {
+    const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    return months[monthIndex] || '-';
+};
+
+const updateClockAndDate = () => {
+    const now = new Date();
+    const hours = formatTwoDigits(now.getHours());
+    const minutes = formatTwoDigits(now.getMinutes());
+    const seconds = formatTwoDigits(now.getSeconds());
+
+    const dayName = getIndonesianDay(now.getDay());
+    const dayNumber = formatTwoDigits(now.getDate());
+    const monthName = getIndonesianMonth(now.getMonth());
+    const year = now.getFullYear();
+
+    if (clockElement) {
+        clockElement.textContent = `Jam : ${hours} : ${minutes} : ${seconds}`;
+    }
+    if (dateElement) {
+        dateElement.textContent = `Hari : ${dayName} | Tanggal : ${dayNumber} | Bulan : ${monthName} | Tahun : ${year}`;
+    }
+};
+
+updateClockAndDate();
+setInterval(updateClockAndDate, 1000);
