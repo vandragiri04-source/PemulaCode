@@ -43,12 +43,13 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
 }
 
 .header-time {
+    order: 1;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -66,19 +67,21 @@ header .container {
     white-space: nowrap;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-direction: row;
-}
-
 .logo-title {
+    order: 2;
     font-size: 4rem;
     font-weight: 700;
     margin: 0;
     text-align: center;
     line-height: 1.1;
+}
+
+.logo {
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: row;
 }
 
 .logo-img {
@@ -98,6 +101,7 @@ header .container {
 
 /* Navigation */
 nav {
+    order: 4;
     display: flex;
     align-items: center;
     margin-left: auto;
