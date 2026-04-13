@@ -47,14 +47,27 @@ header .container {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
 .logo h1 {
     font-size: 1.5rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .logo p {
     font-size: 0.9rem;
     font-weight: 400;
+    margin: 0;
 }
 
 /* Navigation */
@@ -291,6 +304,35 @@ nav {
     font-weight: 500;
 }
 
+/* Extracurricular Section */
+.extracurricular {
+    padding: 80px 0;
+    background-color: var(--gray);
+}
+
+.extracurricular h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-green);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.ekskul-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.ekskul-item {
+    background-color: var(--light-green);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
 /* Footer */
 footer {
     background-color: var(--primary-green);
@@ -383,6 +425,15 @@ footer {
     .achievement-list {
         grid-template-columns: 1fr;
     }
+
+    .ekskul-list {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -398,7 +449,12 @@ footer {
         font-size: 1.8rem;
     }
 
-    .about h2, .vision-mission h2, .achievements h2 {
+    .about h2, .vision-mission h2, .achievements h2, .extracurricular h2 {
         font-size: 1.8rem;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
     }
 }
