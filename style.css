@@ -69,20 +69,37 @@ header .container {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-direction: row;
 }
 
 .logo h1 {
     order: 1;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
 }
 
 .logo-img {
     order: 2;
+    width: 280px;
+    height: 280px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
 }
 
 .logo p {
     order: 3;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
 }
 
 /* Navigation */
@@ -457,25 +474,8 @@ footer {
         margin: 1rem 0;
     }
 
-    .logo-img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .header-time {
-        min-width: 250px;
-    }
-
-    .header-time div {
-        font-size: 0.75rem;
-    }
-
-    .logo h1 {
-        font-size: 1.4rem;
-    }
-
-    .logo p {
-        font-size: 0.8rem;
+    .logo {
+        gap: 1rem;
     }
 
     .hero h2 {
@@ -522,25 +522,7 @@ footer {
         font-size: 1.8rem;
     }
 
-    .logo-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .header-time {
-        min-width: 200px;
-        padding: 0.4rem 0.8rem;
-    }
-
-    .header-time div {
-        font-size: 0.7rem;
-    }
-
-    .logo h1 {
-        font-size: 1.2rem;
-    }
-
-    .logo p {
-        font-size: 0.7rem;
+    .logo {
+        gap: 0.8rem;
     }
 }
