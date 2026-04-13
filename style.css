@@ -55,7 +55,9 @@ header .container {
 .logo-img {
     width: 40px;
     height: 40px;
+    object-fit: contain;
     margin-right: 1rem;
+    display: block;
 }
 
 .logo h1 {
@@ -345,6 +347,27 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.footer-section {
+    min-height: 140px;
+}
+
+.footer-section p,
+.footer-section li {
+    margin-bottom: 0.65rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.footer-section li::before {
+    content: '•';
+    margin-right: 0.5rem;
+    color: var(--light-green);
 }
 
 .footer-section h3 {
