@@ -33,7 +33,7 @@ body {
 header {
     background-color: var(--primary-green);
     color: var(--white);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -43,22 +43,49 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 2rem;
+}
+
+.header-time {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 200px;
+}
+
+.header-time div {
+    font-size: 0.7rem;
+    color: var(--white);
+    font-weight: 500;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+.header-time #date {
+    font-size: 0.65rem;
+    color: var(--light-green);
 }
 
 .logo {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 160px;
+    height: 160px;
     aspect-ratio: 1 / 1;
     object-fit: contain;
-    margin-right: 1rem;
     display: block;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
 }
 
 .logo h1 {
@@ -77,6 +104,7 @@ header .container {
 nav {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 .nav-menu {
@@ -119,7 +147,7 @@ nav {
 .hero {
     background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
     color: var(--white);
-    padding: 120px 0 80px;
+    padding: 200px 0 80px;
     text-align: center;
 }
 
@@ -377,26 +405,6 @@ footer {
     color: var(--light-green);
 }
 
-.footer-clock {
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.footer-clock div {
-    font-size: 0.95rem;
-    color: var(--white);
-    margin-bottom: 0.35rem;
-}
-
-.footer-clock div:last-child {
-    font-size: 0.9rem;
-    color: var(--light-green);
-}
-
 .footer-bottom {
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.18);
@@ -404,9 +412,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .footer-clock {
-        margin: 0 1rem 1.5rem;
-    }
 }
 
 
@@ -449,7 +454,7 @@ footer {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 180px;
         flex-direction: column;
         background-color: var(--primary-green);
         width: 100%;
@@ -465,6 +470,23 @@ footer {
 
     .nav-menu li {
         margin: 1rem 0;
+    }
+
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-time {
+        min-width: 150px;
+    }
+
+    .header-time div {
+        font-size: 0.6rem;
+    }
+
+    .header-time #date {
+        font-size: 0.55rem;
     }
 
     .hero h2 {
@@ -492,11 +514,6 @@ footer {
     .ekskul-list {
         grid-template-columns: 1fr;
     }
-
-    .logo-img {
-        width: 40px;
-        height: 40px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -517,7 +534,19 @@ footer {
     }
 
     .logo-img {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .header-time {
+        min-width: 130px;
+    }
+
+    .header-time div {
+        font-size: 0.55rem;
+    }
+
+    .header-time #date {
+        font-size: 0.5rem;
     }
 }
