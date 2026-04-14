@@ -43,13 +43,12 @@ header {
 
 header .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .header-time {
-    order: 1;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -67,8 +66,22 @@ header .container {
     white-space: nowrap;
 }
 
+.logo-img {
+    width: 280px;
+    height: 280px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .logo-title {
-    order: 2;
     font-size: 4rem;
     font-weight: 700;
     margin: 0;
@@ -76,52 +89,17 @@ header .container {
     line-height: 1.1;
 }
 
-.logo-img {
-    order: 3;
-    width: 280px;
-    height: 280px;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    display: block;
-    flex-shrink: 0;
-}
-
 .logo-p {
-    order: 4;
     font-size: 0.9rem;
     font-weight: 400;
     margin: 0;
     color: var(--white);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-direction: row;
-}
-
-.logo-img {
-    width: 280px;
-    height: 280px;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    display: block;
-    flex-shrink: 0;
-}
-
-.logo p {
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin: 0;
-}
-
 /* Navigation */
 nav {
-    order: 3;
     display: flex;
     align-items: center;
-    margin-left: auto;
 }
 
 .nav-menu {
@@ -464,6 +442,36 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .header-time {
+        min-width: auto;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .logo-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .right-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo-title {
+        font-size: 2.5rem;
+    }
+
+    .logo-p {
+        font-size: 0.75rem;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -487,23 +495,6 @@ footer {
 
     .nav-menu li {
         margin: 1rem 0;
-    }
-
-    .logo {
-        gap: 1rem;
-    }
-
-    .logo-title {
-        font-size: 2.5rem;
-    }
-
-    .logo-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .logo-p {
-        font-size: 0.75rem;
     }
 
     .hero h2 {
@@ -550,8 +541,9 @@ footer {
         font-size: 1.8rem;
     }
 
-    .logo {
-        gap: 0.8rem;
+    .header-time {
+        padding: 0.2rem 0.3rem;
+        font-size: 0.7rem;
     }
 
     .logo-title {
