@@ -107,49 +107,7 @@ header .container {
 }
 
 /* Navigation */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 1.8rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu li {
-    margin: 0;
-}
-
-.nav-menu a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: var(--light-green);
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--white);
-    margin: 3px 0;
-    transition: 0.3s;
-}
+/* Menu bar removed */
 
 /* Hero Section */
 .hero {
@@ -490,31 +448,6 @@ footer {
     .logo-img {
         width: 150px;
         height: 150px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 300px;
-        flex-direction: column;
-        background-color: var(--primary-green);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu li {
-        margin: 1rem 0;
     }
 
     .hero h2 {
